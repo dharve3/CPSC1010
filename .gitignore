@@ -15,5 +15,5 @@
 # any.swp
 *.swp
 
-# a.out files (named ones are ok)
-a.out
+# out files
+*.out
