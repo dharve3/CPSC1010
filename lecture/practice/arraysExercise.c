@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-	int i;
+	
 	// declare 2 arrays 
 	//		numArray1 of size 9, unitialized
 	// 	numArray2 of size 9, initialized to all zeroes 
@@ -20,14 +20,14 @@ int main() {
 
 	// print all the values in numArray1
 	printf("\n\nnumArray1 contains: \n");
-	for (i = 0; i <= 8; i++) {
+	for (int i = 0; i < 9; i++) {
 		printf("%d, ", numArray1[i]);
 	}
 	// numArray1 is uninitalized so it gives varying values for anything not at index 2
 
 	// print all the values in numArray2
 	printf("\n\nnumArray2 contains: \n");
-	for (i = 0; i <= 8; i++) {
+	for (int i = 0; i < 9; i++) {
 		printf("%d, ", numArray2[i]);
  	}
 
