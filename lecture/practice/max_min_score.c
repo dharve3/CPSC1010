@@ -17,6 +17,10 @@ int main(void) {
 	goAgain = 1;
 
    // 4. complete the condition in the while loop
+	/* Consider using EOF predefined in condition of while loop, i.e.
+	 	(scanf("%d", &num) != EOF)
+		Just make sure to comment out/remove other scanf()'s 
+		ALSO, could use !feof(stdin) */
    while (goAgain == 1) {    
       // 5. body of the while loop to keep track of the maximum score 
 		//    and the minimum score	
