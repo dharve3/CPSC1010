@@ -7,6 +7,9 @@ int main() {
 	// 	numArray2 of size 9, initialized to all zeroes 
 	int numArray1[9];
 	int numArray2[9] = {0};
+	int array2[ ] = {1, 2, 3, 4, 5};
+	for (int i = 0; i < 5; i++)
+		printf("%d", array2[i]);
 
 	// assign the value 12 to the third element in numArray1
 	numArray1[2] = 12;
