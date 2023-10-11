@@ -13,31 +13,31 @@ const int MAX_LINE = 20;
 
 int main(void) {
 	// read input from file
-	int i, j;
+	int i, j, temp;
 	int line_len;
 	char line_in[MAX_LINE];
 	char activity_type[NUM_ACTIVITIES][MAX_LINE];
 	float activity_level[NUM_ACTIVITIES];
 
 	for (i = 0; i/2 < NUM_ACTIVITIES; i++) {
-		//printf("i = %d\n", i);
-		//printf("i/2 = %d\n", i/2);
+		printf("DEBUG: i = %d, i/2 = %d, i%2 = %d\n", i, i/2, i%2);
 		fgets(line_in, MAX_LINE, stdin);
 		line_len = strlen(line_in);
-		printf("%s", line_in);
+		printf("DEBUG: Line In: %s", line_in);
 		if (i % 2 == 0) {
-			//printf("Assigning 2D\n");
+			printf("DEBUG: Assigning 2D\n");
 			for (j = 0; j < line_len; j++) {
-				// This also needs work
 				activity_type[i/2][j] = line_in[j];
+				printf("Char: '%c' ", line_in[j]);
 			}
-			printf("%s", activity_type[i/2][]);
+			printf("DEBUG: String: %s", activity_type[i/2]);
 		}
 		else if (i % 2 == 1) {
-			//printf("Assigning 1D\n");
-			// This scanf needs adjustment
-			scanf("%f\n", &activity_level[i/2]);
-			printf("Activity Level: %f\n", activity_level[i/2]);
+			printf("DEBUG: Assigning 1D\n");
+			// This scanf doesn't get any value for some reason
+			temp = scanf("%f\n", &activity_level[i/2]);
+			printf("DEBUG: Scanf return = %d\n", temp);
+			printf("DEBUG: Activity Level: %f\n", activity_level[i/2]);
 		}
 	}
 	
