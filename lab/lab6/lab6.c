@@ -20,11 +20,12 @@ int main(void) {
 	float activity_level[NUM_ACTIVITIES];
 
 	for (i = 0; i/2 < NUM_ACTIVITIES; i++) {
+		printf("-----------------------------------\n");
 		printf("DEBUG: i = %d, i/2 = %d, i%2 = %d\n", i, i/2, i%2);
-		fgets(line_in, MAX_LINE, stdin);
-		line_len = strlen(line_in);
-		printf("DEBUG: Line In: %s", line_in);
 		if (i % 2 == 0) {
+			fgets(line_in, MAX_LINE, stdin);
+			line_len = strlen(line_in);
+			printf("DEBUG: Line In: %s", line_in);
 			printf("DEBUG: Assigning 2D\n");
 			for (j = 0; j < line_len; j++) {
 				activity_type[i/2][j] = line_in[j];
@@ -34,7 +35,6 @@ int main(void) {
 		}
 		else if (i % 2 == 1) {
 			printf("DEBUG: Assigning 1D\n");
-			// This scanf doesn't get any value for some reason
 			temp = scanf("%f\n", &activity_level[i/2]);
 			printf("DEBUG: Scanf return = %d\n", temp);
 			printf("DEBUG: Activity Level: %f\n", activity_level[i/2]);
