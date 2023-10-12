@@ -1,7 +1,8 @@
 /*	Dylan Harvey
 	10/03/2023
 	CPSC-1011-002
-	Description Here
+	Calculates BMR from user input and determines
+	daily calorie intake per activity level
 */
 
 #include <stdio.h>
@@ -47,11 +48,11 @@ int main(void) {
 		printf("\n\nAre you a boy or a girl? 1 for boy, 2 for girl: ");
 		scanf("%d", &gender);
 	}
-	printf("\nYour weight (pounds): ");
+	printf("\nYour weight (pounds): \n");
 	scanf("%d", &weight_lbs);
-	printf("Your height (inches): ");
+	printf("Your height (inches): \n");
 	scanf("%d", &height_in);
-	printf("Your age (years): ");
+	printf("Your age (years): \n");
 	scanf("%d", &age);
 	
 	// calculate values
