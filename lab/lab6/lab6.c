@@ -13,7 +13,7 @@ const int MAX_LINE = 20;
 
 int main(void) {
 	// read input from file
-	int i, j, gender, weight_lbs, height_in, age, temp;
+	int i, j, gender, weight_lbs, height_in, age;
 	float weight_kg, height_cm;
 	double BMR, calories;
 	char line_in[MAX_LINE];
@@ -21,28 +21,27 @@ int main(void) {
 	float activity_level[NUM_ACTIVITIES];
 
 	for (i = 0; i/2 < NUM_ACTIVITIES; i++) {
-		printf("-----------------------------------\n");
-		printf("DEBUG: i = %d, i/2 = %d, imod2 = %d\n", i, i/2, i%2);
+		// printf("-----------------------------------\n");
+		// printf("DEBUG: i = %d, i/2 = %d, imod2 = %d\n", i, i/2, i%2);
 		if (i % 2 == 0) {
 			fgets(line_in, MAX_LINE, stdin);
-			printf("DEBUG: Line In: %s", line_in);
-			printf("DEBUG: Assigning 2D\n");
+			// printf("DEBUG: Line In: %s", line_in);
+			// printf("DEBUG: Assigning 2D\n");
 			for (j = 0; j < MAX_LINE; j++) {
 				activity_type[i/2][j] = line_in[j];
-				printf("Char: '%c' ", line_in[j]);
+				// printf("Char: '%c' ", line_in[j]);
 			}
-			printf("DEBUG: String: %s", activity_type[i/2]);
+			// printf("DEBUG: String: %s", activity_type[i/2]);
 		}
 		else if (i % 2 == 1) {
-			printf("DEBUG: Assigning 1D\n");
-			temp = scanf("%f\n", &activity_level[i/2]);
-			printf("DEBUG: Scanf return = %d\n", temp);
-			printf("DEBUG: Activity Level: %f\n", activity_level[i/2]);
+			// printf("DEBUG: Assigning 1D\n");
+			scanf("%f\n", &activity_level[i/2]);
+			// printf("DEBUG: Activity Level: %f\n", activity_level[i/2]);
 		}
 	}
 	// Ask user for values
 	// COMMENT THIS LINE OUT BEFORE GRADESCOPE SUBMISSION:
-	freopen("/dev/tty", "rw", stdin);
+	// freopen("/dev/tty", "rw", stdin);
 
 	while (gender != 1 && gender != 2) {
 		printf("\n\nAre you a boy or a girl? 1 for boy, 2 for girl: ");
@@ -60,11 +59,11 @@ int main(void) {
 	height_cm = height_in * 2.54;
 
 	if (gender == 1) {
-		printf("DEBUG: Calculating for boy");
+		// printf("DEBUG: Calculating for boy");
 		BMR = (10 * weight_kg + 6.25 * height_cm - 5 * age + 5);
 	}
 	else if (gender == 2) {	
-		printf("DEBUG: Calculating for girl");
+		// printf("DEBUG: Calculating for girl");
 		BMR = (10 * weight_kg + 6.25 * height_cm - 5 * age - 161);
 	}
 	// print results
