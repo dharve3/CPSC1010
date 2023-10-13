@@ -42,7 +42,7 @@ int main(void) {
 	}
 	// Ask user for values
 	// COMMENT THIS LINE OUT BEFORE GRADESCOPE SUBMISSION:
-	// freopen("/dev/tty", "rw", stdin);
+	freopen("/dev/tty", "rw", stdin);
 
 	while (gender != 1 && gender != 2) {
 		printf("\n\nAre you a boy or a girl? 1 for boy, 2 for girl: ");
