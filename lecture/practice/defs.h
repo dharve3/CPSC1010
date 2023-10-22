@@ -1,4 +1,8 @@
+#ifndef DEFS_H
+#define DEFS_H
+
 #include <stdio.h>
 
-int minimum(int theArray[], int size);
+int findMinimum(int theArray[], int size);
 
+#endif
