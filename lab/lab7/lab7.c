@@ -36,9 +36,8 @@ int main(void) {
 	// Print BMR results
 	printf("\n\nYour BMR (basal metabolic rate) is %.1lf", bmr);
 	printf("\n\nBMR represents the amount of calories you burn at rest."
-			 "\n\nTotal daily calories needed to maintain your current "
-			 "weight at a\nparticular activity levels is "
-			 "your BMR * that activity level value:\n\n");
+			 "\n\nTotal daily calories needed to maintain your current weight\n"
+			 "at your activity level is BMR * activity level value:\n\n");
 	
 	// Calculate and print daily calorie intake results
 	printCaloriesNeeded(bmr, activity_level, activity_type);
@@ -81,11 +80,11 @@ double getUserInput() {
 		printf("\n\nAre you a boy or a girl? 1 for boy, 2 for girl: ");
 		scanf("%d", &gender);
 	}
-	printf("\nYour weight (pounds): \n");
+	printf("Your weight (pounds): ");
 	scanf("%d", &weight_lbs);
-	printf("Your height (inches): \n");
+	printf("Your height (inches): ");
 	scanf("%d", &height_in);
-	printf("Your age (years): \n");
+	printf("Your age (years): ");
 	scanf("%d", &age);
 	
 	// Calculate values
