@@ -60,16 +60,15 @@ int main(void) {
 		while (exercise > NUM_EXERCISES) {
 			printf("\n\nChoose exercise: ");
 			scanf("%d", &exercise);
-			exercise -= 1;
-			// Note exercise -= 1; because the list displays the values with +1
 		}
 		printf("Duration (minutes): ");
 		scanf("%d", &duration);
 
 		// Calculate
-		// printf("DEBUG: Chosen: %s", met_types[exercise]);
-		// printf("DEBUG: %lf, postion %d", met_values[exercise], exercise+1);
-		calories = duration * (met_values[exercise] * 3.5 * (weight/2.205))/200;
+		// printf("DEBUG: Chosen: %s", met_types[exercise-1]);
+		// printf("DEBUG: %lf, postion %d", met_values[exercise-1], exercise);
+		// Note exercise -1; because the list displays the values with +1
+		calories = duration * (met_values[exercise-1]*3.5*(weight/2.205))/200;
 
 		printf("\nThe total calories burned: %.1lf\n\n", calories);
 
