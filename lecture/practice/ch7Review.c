@@ -68,10 +68,12 @@ int x = 2;
 
 void f1(int x) {
    x++;
+	// increments local x but is destroyed upon function completion
 }
 
 void f2(void) {
    x++;
+	// increments global x
 }
 
 int main(void) {        
@@ -88,11 +90,14 @@ int x = 2;
 
 void f1(int x) {
    x++;
+	// increments local x then is destroyed
    f2();
 }
 
 void f2(void) {
    x++;
+	// increments global x
+	// prints global x
    printf("x=%i \n",x);  // What prints?
 }
 
