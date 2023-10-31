@@ -1,0 +1,14 @@
+NOTE: From now on use #define rather than const int
+it is much easier when working with multi file programs.
+
+Example using #define:
+-defs.h-
+#define CONST 5
+
+example using const int:
+-defs.h-
+extern const int CONST;
+
+-prog.c-
+const int CONST = 5;
+
