@@ -17,3 +17,6 @@
 
 # out files
 *.out
+
+# files named "temp"
+temp.*
