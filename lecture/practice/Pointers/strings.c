@@ -13,16 +13,20 @@
 
 
 int main(void) {
-	// char word[8];
+	char word[8];
 	// word = "Hello";
 
 	char *aPtr = NULL;
+	aPtr = "Hello";
+	aPtr = "World"; // Not replacing previous string, created string in different location in memory
+	// this is a MEMORY LEAK if memory is not dynamically allocated!!!
+	// Dynamically allocated memory is also preferred becuase it allows you to call from previous definitions
 
-	/* aPtr = (char *)malloc(25 * sizeof(char));
+	aPtr = (char *)malloc(25 * sizeof(char));
 	if (aPtr == NULL) {
 		printf("error with malloc\n");
 		exit(1);
-	} */
+	}
 
 
 	// aPtr = "Cathy Kittelstad";
