@@ -23,7 +23,7 @@ int main(void) {
 
 	initArray(exercise_count, exercises, inFile);
 
-	printArray(exercise_count, exercises);
+	// printArray(exercise_count, exercises);
 
 	getWorkout(exercise_count, exercises);
 

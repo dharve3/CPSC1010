@@ -11,21 +11,42 @@
 // output:  none
 void initArray(int arraySize, exercise workout[], FILE *inFile) {
 	int i;
-	char buffer[80];
+	char buffer[41];
+
+	fgets(buffer, 41, inFile);
 	for (i = 0; i/2 < arraySize; i++) {
-		fgets(buffer, 80, inFile);
+		fgets(buffer, 41, inFile);
+		buffer[strcspn(buffer, "\n")] = 0; 
+		// I was hoping this would be a temporary soln. but formatting is messed up in print without it
+		// printf("DEBUG: buffer: %s\n", buffer);
+		/* printf("DEBUG: char buffer:\n");
+		for (int j = 0; j < 41; j++) {
+			printf("'%c', ", buffer[j]);
+		}
+		printf("\n");
+		*/
 		if (i % 2 == 0) {
 			strcpy(workout[i/2].name, buffer);
+			// printf("DEBUG: assigning name %s\n", workout[i/2].name);
+			/*printf("DEBBUG: char name");	
+			for (int j = 0; j < 41; j++) {
+				printf("'%c', ", workout[i/2].name[j]);
+			}
+		printf("\n");
+		*/
 		}
 		else if (i % 2 == 1) {
 			strcpy(workout[i/2].muscles, buffer);
+			// printf("DEBUG: assigning muscles %s\n", workout[i/2].muscles);
 		}
 
 		workout[i/2].weight = 0;
 		workout[i/2].time = 0;
 		workout[i/2].sets = 0;
 		workout[i/2].reps = 0;
-	}
+	}	
+		//printf("DEBUG: EXERCISE, MUSCLES, WEIGHT, TIME, SETS, REPS\n"
+		//		 "%s, %s, %d, %d, %d, %d\n", workout[1].name, workout[1].muscles, workout[1].weight, workout[1].time, workout[1].sets, workout[1].reps);
 }
 
 
@@ -58,12 +79,8 @@ void printArray(int arraySize, exercise workout[]) {
 // inputs:  the size of the array and the array
 // output:  none
 void getWorkout(int arraySize, exercise workout[]) {
-
-
-
-
-
-
+	freopen("dev/tty", "rw", stdin);
+	
 
 
 
