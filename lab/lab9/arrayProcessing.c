@@ -1,5 +1,5 @@
 /*	arrayProcessing.c
-	Desc...
+	Contains all the functions used in lab9.c
 */
 
 
@@ -79,10 +79,29 @@ void printArray(int arraySize, exercise workout[]) {
 // inputs:  the size of the array and the array
 // output:  none
 void getWorkout(int arraySize, exercise workout[]) {
-	freopen("dev/tty", "rw", stdin);
-	
+	// freopen("dev/tty", "rw", stdin);
+	// Even on virtual machine, only gets input if this line commented out
+	// What is going on here??
 
+	int i;
 
+	for (i=0; i < arraySize; i++) {
+		// Some newlines look weird on local, but gradescope moment
+		printf("\n%s for %s:", workout[i].name, workout[i].muscles);
 
+		if (i != 6 && i != 10) {
+			printf("\n\tWeight: ");
+			scanf("%d", &workout[i].weight);
+		}
+		if (i == 4 || i == 5 || i == 6 || i == 10) {
+			printf("\n\tTime: ");
+			scanf("%d", &workout[i].time);
+		}
+		printf("\n\tSets: ");
+		scanf("%d", &workout[i].sets);
+		printf("\n\tReps: ");
+		scanf("%d", &workout[i].reps);
+		printf("\n");
+	}
 }
 
