@@ -94,6 +94,8 @@ void getWorkout(int arraySize, exercise workout[]) {
 			scanf("%d", &workout[i].weight);
 		}
 		if (i == 4 || i == 5 || i == 6 || i == 10) {
+			//if (i == 6 || i == 10)
+				//printf("\n");
 			printf("\n\tTime: ");
 			scanf("%d", &workout[i].time);
 		}
@@ -101,7 +103,8 @@ void getWorkout(int arraySize, exercise workout[]) {
 		scanf("%d", &workout[i].sets);
 		printf("\n\tReps: ");
 		scanf("%d", &workout[i].reps);
-		printf("\n");
+		// printf("\n");
 	}
+	printf("\n");
 }
 

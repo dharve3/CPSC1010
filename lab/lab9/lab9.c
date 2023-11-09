@@ -22,6 +22,8 @@ int main(void) {
 	exercise exercises[exercise_count];
 
 	initArray(exercise_count, exercises, inFile);
+	
+	// printArray(exercise_count, exercises);
 
 	getWorkout(exercise_count, exercises);
 

@@ -6,7 +6,7 @@
 #include <string.h>
 
 // Define global vars/constants
-typedef struct exercise {
+typedef struct {
 	char name[20];
 	char muscles[40];
 	int weight;
