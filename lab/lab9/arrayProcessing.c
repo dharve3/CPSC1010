@@ -89,13 +89,17 @@ void getWorkout(int arraySize, exercise workout[]) {
 		// Some newlines look weird on local, but gradescope moment
 		printf("\n%s for %s:", workout[i].name, workout[i].muscles);
 
-		if (i != 6 && i != 10) {
+		// if (i != 6 && i != 10) {
+		if ( !(strcmp(workout[i].name, "leg_raises") == 0) && 
+			!(strcmp(workout[i].name, "situps/crunches") == 0) ) {
 			printf("\n\tWeight: ");
 			scanf("%d", &workout[i].weight);
 		}
-		if (i == 4 || i == 5 || i == 6 || i == 10) {
-			//if (i == 6 || i == 10)
-				//printf("\n");
+		// if (i == 4 || i == 5 || i == 6 || i == 10) {
+		if ( (strcmp(workout[i].name, "hip_thrust") == 0) ||
+			(strcmp(workout[i].name, "russian_twists") == 0) ||
+			(strcmp(workout[i].name, "leg_raises") == 0) ||
+			(strcmp(workout[i].name, "situps/crunches") == 0) ) {
 			printf("\n\tTime: ");
 			scanf("%d", &workout[i].time);
 		}
