@@ -20,15 +20,16 @@ int main(void) {
 	fscanf(inFile, "%d", &exercise_count);
 	
 	exercise exercises[exercise_count];
-
+	
 	initArray(exercise_count, exercises, inFile);
 	
+	fclose(inFile);
+
 	// printArray(exercise_count, exercises);
 
 	getWorkout(exercise_count, exercises);
 
 	printArray(exercise_count, exercises);
 
-	fclose(inFile);
 	return 0;
 }

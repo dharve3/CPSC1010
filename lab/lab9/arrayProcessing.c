@@ -17,14 +17,7 @@ void initArray(int arraySize, exercise workout[], FILE *inFile) {
 	for (i = 0; i/2 < arraySize; i++) {
 		fgets(buffer, 41, inFile);
 		buffer[strcspn(buffer, "\n")] = 0; 
-		// I was hoping this would be a temporary soln. but formatting is messed up in print without it
-		// printf("DEBUG: buffer: %s\n", buffer);
-		/* printf("DEBUG: char buffer:\n");
-		for (int j = 0; j < 41; j++) {
-			printf("'%c', ", buffer[j]);
-		}
-		printf("\n");
-		*/
+		// Removes all newlines from strings
 		if (i % 2 == 0) {
 			strcpy(workout[i/2].name, buffer);
 			// printf("DEBUG: assigning name %s\n", workout[i/2].name);
