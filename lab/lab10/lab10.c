@@ -17,12 +17,12 @@ int main(int argc, char * argv[]) {
 		fprintf(stderr, "n should be greater than 0\n");
 		exit(2);
 	}
-
-	printf("DEBUG: argc: %d, argv[0]: %s, argv[1]: %s\n", argc, argv[0], argv[1]);
-	printf("DEBUG: fib_size: %i\n", fib_size);
-
+	
+	// printf("DEBUG: argc: %d, argv[0]: %s, argv[1]: %s\n", argc, argv[0], argv[1]);
+	// printf("DEBUG: fib_size: %i\n", fib_size);
+	
 	int * fibonacci_numbers = generateFibonacci(fib_size);
-
+	
 	printHistogram(fibonacci_numbers, fib_size);
 	
 	free(fibonacci_numbers);
