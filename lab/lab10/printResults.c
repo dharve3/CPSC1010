@@ -1,7 +1,8 @@
 /*	printResults.c
 	Dylan Harvey
-
-
+	Prints the given array of fibbonaci numbers
+	parameters: fibArray, size
+	return: none
 */
 
 #include "defs.h"

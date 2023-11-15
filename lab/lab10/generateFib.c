@@ -1,7 +1,9 @@
 /*	generateFib.c
 	Dylan Harvey
-
-
+	Generates fibbonacci numbers for the given size from the argument.
+	Fills array pointer from malloc
+	parameters: size (from cmd line arguments)
+	return: array of fibonacci numbers
 */
 
 #include "defs.h"

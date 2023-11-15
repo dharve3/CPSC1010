@@ -1,8 +1,8 @@
 /*	Dylan Harvey
 	11/17/2023
 	CPSC-1011-002
-	Desc here...
-
+	Gets command line input from user for number of fibbonacci numbers
+	to initalize and then print using 2 functions.
 */
 
 #include "defs.h"
