@@ -10,16 +10,14 @@ int * generateFibonacci ( int size ) {
 	int * array;
 	int i;
 	
-	array = (int *)malloc(size * sizeof(int)); 
+	array = (int *) malloc(size * sizeof(int)); 
 	
 	if (array == NULL) {
 		fprintf(stderr, "Error initalizing array\n");
 		exit(1);
 	}
 	
-	/*array[0] = 1;
-	array[1] = 1;*/
-	for (i=0; i <= size; i++) {
+	for (i=0; i < size; i++) {
 		if (i == 0 || i == 1) {
 			array[i] = 1;
 		}
